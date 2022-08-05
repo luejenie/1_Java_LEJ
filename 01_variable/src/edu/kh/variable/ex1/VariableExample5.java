@@ -49,9 +49,13 @@ public class VariableExample5 {
 		// \n : 줄바꿈(개행)을 나타내는 탈출(escape) 문자. new line. 	
 		
 		
-		System.out.println("줄 바꼈나요?");
-		
+			
 		System.out.println("내가 추가한 내용");
+		
+		// 주석 _깃허브 테스트겸 추가
+		System.out.println("새로운 코드");
+		int aaa = 10;
+		System.out.println("aaa :" + aaa);
 		
 		
 	}
