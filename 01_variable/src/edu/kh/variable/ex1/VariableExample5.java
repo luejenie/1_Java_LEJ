@@ -56,6 +56,8 @@ public class VariableExample5 {
 		System.out.println("새로운 코드");
 		int aaa = 10;
 		System.out.println("aaa :" + aaa);
+		// 새로운 내용 추가_ 테스트용
+		// 집에서 사용하는 workspace라고 하고 학원 workspace로 보내기 연습
 		
 		
 	}
