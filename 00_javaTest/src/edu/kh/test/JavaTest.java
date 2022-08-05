@@ -16,6 +16,10 @@ public class JavaTest {
 		System.out.println("println()은 한 줄 출력입니다. 그러면 여러 줄은?");
 		System.out.println( 100 + 200 + 300 + 400 );//""은 문자열만. 숫자는
 		System.out.println( "100 + 200 + 300 + 400" );
+		
+		
+		System.out.println("git 쉽지 않아요..");
+		System.out.println("git 연습 많이 해야 됩니다!");
 	}
 	
 }
