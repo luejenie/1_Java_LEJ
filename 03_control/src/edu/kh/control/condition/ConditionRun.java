@@ -1,0 +1,28 @@
+package edu.kh.control.condition;
+
+//코드를 실행시키는 부분(시키는 사람) _Run파트 a.k.a.관리자
+public class ConditionRun {
+	
+	public static void main(String[] args) {
+		
+		//ConditionExample이라는 사람을 고용하고 일을 시키기
+		ConditionExample ex = new ConditionExample();
+		
+		//커서 놓고 + ctrl + /  : 한 줄 주석
+		//ex. 치면 ex가 할 수 있는 목록이 보임
+//		ex.test1();
+//		ex.test2();
+		
+//		ex.ex1();
+		ex.ex2();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}
