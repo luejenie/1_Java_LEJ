@@ -19,7 +19,6 @@ public class VariableExample6 {
 		// -> sc라는 이름으로 Scanner 사용 가능
 		
 		// 3) Scanner로 입력 받기
-		
 		// 정수 : sc.nextInt();
 		System.out.println("입력 받은 두 정수의 합 구하기");
 		
