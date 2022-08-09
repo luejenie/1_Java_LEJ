@@ -121,6 +121,7 @@ public class SwitchExample {
 		case "짬뽕" : result = 10000; break;
 		default : result = -1;   // 잘못 입력하면 -1이라고 의미 부여. _자체적으로
 								 //	실상에서 음수 가격은 없음. 
+								 // 정수형이어서 문자형이 바로 올 수 없음. 이에 숫자 부여.
 		}
 		
 		if(result == -1) {
@@ -261,9 +262,7 @@ public class SwitchExample {
 		System.out.println(season);
 
 	}
-	
-	
-	
+
 	
 	
 	
