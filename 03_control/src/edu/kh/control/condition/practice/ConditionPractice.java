@@ -254,6 +254,7 @@ public class ConditionPractice {
 		System.out.println("중간 고사 점수 : ");
 		double midTerm = sc.nextInt();  // int로 입력 받아도 대입 연산 시 double로 자동 형변환
 										//왜 에러나지 않나. 큰쪽으로 자동 형변환 되기 때문에!
+										//스캐너에 입력은 정수로 되고, 밑에서 결과 표시 될 때는 실수로 나옴!
 		
 		System.out.println("기말 고사 점수 : ");
 		double finalTerm = sc.nextInt();
@@ -292,7 +293,7 @@ public class ConditionPractice {
 			double sum = midTerm + finalTerm + report + attendance;
 			System.out.printf("총점 : %.1f \n", sum);
 			
-			if(sum >= 0) {
+			if(sum >= 70.0) {
 				System.out.println("PASS");
 			} else {
 				System.out.println("Fail [점수 미달]");
@@ -329,14 +330,48 @@ public class ConditionPractice {
 		report *= 0.3;
 		// atd *1 =
 		
-		double total = midterm + finalterm + report + atd;
+		
+		// 출력화면 보기. 출석일수 부족 위에는 ==결과== 아래 부분이 나오지 않음. 
+		// -> 이부분 어떻게 쓰였는지 확인하기!! System.out.println("Fail [출석 횟수 부족] (" + (int)attendance + "/20)");
+		// if-else / if-else if-else 차이 비교하기
+		// 하
+		if((20-atd) >= (20*0.3)) { //출석일수 부족
+			 System.out.println("Fail [출석 횟수 부족 (" + (int)atd + "/20) ]");
+		
+		} else {  // 출석 만족
+			double total = midterm + finalterm + report + atd;
+			
+			System.out.println("========결과========");
+			System.out.println("중간 고사 점수(20) : " + midterm);
+			System.out.println("기말 고사 점수(20) : " + finalterm);
+			System.out.println("과제 점수 (30) : " + report);
+			System.out.println("출석 점수 (20) : " + atd);
+			System.out.println("총점 : " + total);
+			
+			if(total >= 70.0){
+			System.out.println("PASS");
+			
+			} else {
+				System.out.println("Fail [점수 미달]");
+			}
+		
+		}
+	}
+}
 		
 		
-		String result;
+		
+		
+		
+		
+	/*	
 		if(total < 70) { //70점 미만이거나
 			result = "Fail [점수 미달]";
 		
-		} else if((20-atd) >= (20*0.3)){ //출석일수 부족
+		} else { 
+			
+			if((20-atd) >= (20*0.3)){ //출석일수 부족
+		
 			result = "Fail [출석 횟수 부족 (" + atd + "/20)";     //앞부분이 안나와야 함!!		
 			
 		} else { //70점 이상이면서 출석일수 충족
@@ -352,11 +387,6 @@ public class ConditionPractice {
 		System.out.println("총점 : " + total);
 		System.out.println(result);
 
-		
-		
-		
-	}
-	
+	} */
 	
 
-}

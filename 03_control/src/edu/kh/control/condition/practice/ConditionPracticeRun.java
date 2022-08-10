@@ -11,7 +11,7 @@ public class ConditionPracticeRun {
 //		cp.practice4();
 //		cp.practice5();
 		
-		cp.practice5_review();
+		cp.practice5_review();   //복습
 		
 		
 		
