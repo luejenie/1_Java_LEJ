@@ -250,7 +250,88 @@ public class BranchExample {
 	}//updown
 	
 	
+	public void rpsGame() {   //가위바위보
+		
+		   // 난수 이용
+		
+		   // 몇판? : 3
+		   
+		   // 1번째 게임
+		   // 가위/바위/보 중 하나를 입력 해주세요 :  가위
+		   // 컴퓨터는 [보]를 선택했습니다.
+		   // 플레이어 승!
+		   // 현재 기록 : 1승 0무 0패
+		   
+		   // 2번째 게임
+		   // 가위/바위/보 중 하나를 입력 해주세요 :  보
+		   // 컴퓨터는 [보]를 선택했습니다.
+		   // 비겼습니다.
+		   // 현재 기록 : 1승 1무 0패
+		   
+		   // 3번째 게임
+		   // 가위/바위/보 중 하나를 입력 해주세요 :  가위
+		   // 컴퓨터는 [바위]를 선택했습니다.
+		   // 졌습니다ㅠㅠ
+		   // 현재 기록 : 1승 1무 1패
+		
 	
+			int ran = (int)(Math.random() *3);
+			
+			// --> 결과가 0/1/2 가 나옴.
+			// 0:가위 / 1:바위 / 2:보
+			
+			int s = 0;  // 가위
+			int r = 1;  // 바위
+			int p = 2;  // 보 
+		
+			// 승: 가위>보 / 바위>가위 / 보자기 > 바위
+			
+			
+			
+			
+			
+			Scanner sc = new Scanner(System.in);
+			System.out.print("몇 판? : ");
+			int count = sc.nextInt();
+		
+			
+			for(int i=1 ; i<=count ; i++) {
+				
+				System.out.print("가위/바위/보 중 하나를 입력해주세요 :");
+				String input = sc.next();
+				
+				System.out.printf("컴퓨터는 [%d]를 선택했습니다.\n", ran);
+				
+				if(input.equals("가위")) {
+					
+					if(ran==s) {
+						System.out.println("비겼습니다.");
+					}
+					
+					i
+					
+					
+					
+					
+					
+				}
+				
+				
+			
+								
+//				if(input.equals("가위") &&) {
+//
+//				}
+				
+			}
+			
+			
+			
+			//몇 판인지 입력 받고, 그만큼 작동하는 for문 입력.
+	
+	
+	
+	} //rps
 	
 	
 	
