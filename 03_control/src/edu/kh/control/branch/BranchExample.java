@@ -279,56 +279,109 @@ public class BranchExample {
 			
 			// --> 결과가 0/1/2 가 나옴.
 			// 0:가위 / 1:바위 / 2:보
-			
-			int s = 0;  // 가위
-			int r = 1;  // 바위
-			int p = 2;  // 보 
 		
 			// 승: 가위>보 / 바위>가위 / 보자기 > 바위
-			
-			
-			
-			
+	
 			
 			Scanner sc = new Scanner(System.in);
 			System.out.print("몇 판? : ");
-			int count = sc.nextInt();
-		
+			int pan = sc.nextInt();
 			
-			for(int i=1 ; i<=count ; i++) {
+			int count = 0; // n번째 판
+			int winCount = 0; //승 카운트
+			int loseCount = 0; //패 카운트
+			int tieCount = 0; //무 카운트
+		
+			String rannum="";
+			String result = "";
+			
+			//몇 판인지 입력 받고, 그만큼 작동하는 for문 입력.
+			
+			
+			for(int i=1 ; i<=pan ; i++) {
 				
-				System.out.print("가위/바위/보 중 하나를 입력해주세요 :");
+				count++;
+				System.out.println(count + "번째 게임");
+				System.out.print("가위/바위/보 중 하나를 입력해주세요 : ");
 				String input = sc.next();
 				
-				System.out.printf("컴퓨터는 [%d]를 선택했습니다.\n", ran);
 				
-				if(input.equals("가위")) {
+				switch(ran) {
+				case 0 : rannum="가위"; break;
+				case 1 : rannum="바위"; break;
+				case 2 : rannum="보"; break;
+				default : ;
+				} System.out.printf("컴퓨터는 [%s]를 선택했습니다.\n", rannum);
+				
+				
+				//플레이어(나) : 가위일 떄
+				if(input.equals("가위")) {  
+					if(ran == 0) { // 나:가위 - 컴:가위
+						result = "비겼습니다.";	
+						tieCount++;
 					
-					if(ran==s) {
-						System.out.println("비겼습니다.");
+					} else if(ran == 1) { //나:가위 - 컴:바위
+						result = "졌습니다ㅠㅠ";
+						loseCount++;
+						
+					} else { //나:가위 - 컴:보자기
+						result = "플레이어 승!";
+						winCount++;
+			
 					}
 					
-					i
+					System.out.println(result);
+					System.out.printf("현재 기록 : %d승 %d패 %d무 \n", winCount, loseCount, tieCount);
+					System.out.println();  // 줄바꿈
+				
+				} else if(input.equals("바위")) {   //플레이어(나) : 바위일 떄
+					if(ran == 0) { //나:바위 - 컴:가위
+						result = "플레이어 승!";	
+						winCount++;
 					
+					} else if(ran == 1) { //나:바위 - 컴:바위
+						result = "비겼습니다.";
+						tieCount++;
+						
+					} else { //나:바위 - 컴:보자기
+						result = "졌습니다.";
+						loseCount++;
+			
+					}
 					
+					System.out.println(result);
+					System.out.printf("현재 기록 : %d승 %d패 %d무 \n", winCount, loseCount, tieCount);
+					System.out.println();  // 줄바꿈
+				
 					
+				} else if(input.equals("보")) {   //플레이어(나) : 보자기일 떄
+					if(ran == 0) { // 나:보 - 컴:가위
+						result = "졌습니다ㅠㅠ";	
+						loseCount++;
 					
+					} else if(ran == 1) { //나:보 - 컴:바위
+						result = "플레이어 승!";
+						winCount++;
+						
+					} else { //나:보 - 컴:보자기
+						result = "비겼습니다.";
+						tieCount++;
+			
+					}
 					
+					System.out.println(result);
+					System.out.printf("현재 기록 : %d승 %d패 %d무 \n", winCount, loseCount, tieCount);
+					System.out.println();  // 줄바꿈
 				}
-				
-				
 			
 								
-//				if(input.equals("가위") &&) {
-//
-//				}
+
 				
 			}
 			
 			
 			
-			//몇 판인지 입력 받고, 그만큼 작동하는 for문 입력.
-	
+			
 	
 	
 	} //rps
