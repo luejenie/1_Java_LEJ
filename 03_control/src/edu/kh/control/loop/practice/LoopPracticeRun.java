@@ -17,8 +17,18 @@ public class LoopPracticeRun {
 //		lp.practice9();  //공백이용. for문 3개
 //		lp.practice10(); //이중for문을 따로 2개
 //		lp.practice11();  //선생님 풀이 확인하고 해보기
-		lp.practice12();  //??????
+//		lp.practice12();  //??????
 //		lp.practice13();  //중첩 if
+		
+		
+		LoopPracticeLEJ lplej = new LoopPracticeLEJ();
+		
+		lplej.practice1();
+		
+		
+		
+		
+		
 	}
 
 }

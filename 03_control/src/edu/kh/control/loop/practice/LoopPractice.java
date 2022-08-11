@@ -142,7 +142,7 @@ public class LoopPractice {
 		        num2 = temp; // temp:8 / num1:4 / num2:8
 			}
 		
-			for(int i=num ; i<num2 ; i++) {
+			for(int i=num1 ; i<num2 ; i++) {
 				System.out.print(i + " ");	
 			}
 		}
@@ -427,12 +427,12 @@ public class LoopPractice {
 			for(int i = input-1 ; i >=row; i--) {
 				System.out.println(" ");
 			}
-			
-			for(int col = 1 ; col<=)
-			
-			
-			
 		}
+		//	for(int col = 1 ; col<=1) {
+			
+			
+			
+		
 	} //p11
 	
 	
