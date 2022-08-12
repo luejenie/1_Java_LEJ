@@ -300,19 +300,19 @@ public class LoopPractice {
 			System.out.println(); //줄바꿈
 		}
 */
-		
+		  //x표시 나서 일단 주석처리
 		// 방법(2) if문을 이용
 		// int row=0;
-		for(int col=1 ; col<=input ; col++) { //별 출력
-			
-			if(col <= input - row) {
-				System.out.println(" ");
-			
-			} else {
-				System.out.println("*");
-			
-			}		
-		}
+//		for(int col=1 ; col<=input ; col++) { //별 출력
+//			
+//			if(col <= input - row) {
+//				System.out.println(" ");
+//			
+//			} else {
+//				System.out.println("*");
+//			
+//			}		
+//		}
 		
 		System.out.println(); //줄바꿈
 		

@@ -250,7 +250,113 @@ public class BranchExample {
 	}//updown
 	
 	
-	public void rpsGame() {   //가위바위보
+	//가위바위보
+		
+		   // 난수 이용
+		
+		   // 몇판? : 3
+		   
+		   // 1번째 게임
+		   // 가위/바위/보 중 하나를 입력 해주세요 :  가위
+		   // 컴퓨터는 [보]를 선택했습니다.
+		   // 플레이어 승!
+		   // 현재 기록 : 1승 0무 0패
+		   
+		   // 2번째 게임
+		   // 가위/바위/보 중 하나를 입력 해주세요 :  보
+		   // 컴퓨터는 [보]를 선택했습니다.
+		   // 비겼습니다.
+		   // 현재 기록 : 1승 1무 0패
+		   
+		   // 3번째 게임
+		   // 가위/바위/보 중 하나를 입력 해주세요 :  가위
+		   // 컴퓨터는 [바위]를 선택했습니다.
+		   // 졌습니다ㅠㅠ
+		   // 현재 기록 : 1승 1무 1패
+		
+	public void rpsGame() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("몇 판? ");
+		int round = sc.nextInt();
+		
+		// 승/무/패를 기록하는 변수 선언 및 0으로 초기화
+		int win = 0;
+		int draw = 0;
+		int lose = 0;
+		
+
+			for(int i=1 ; i<=round ; i++) {
+				
+				System.out.println("\n" + i + "번째 게임");
+				System.out.print("가위/바위/보 중 하나를 입력해 주세요 : ");
+				
+				String player = sc.next();
+				
+				int ran = (int)(Math.random() *3);
+				// --> 결과가 0/1/2 가 나옴.
+				// 0:가위 / 1:바위 / 2:보
+							
+				
+				// 컴퓨터 가위/바위/보 지정
+				String com = null; // null: String의 기본 값 / 없다랑 비슷. //_ "" 빈칸으로 둬도 됨. 
+				
+				switch(ran) {
+				case 0 : com = "가위"; break;
+				case 1 : com = "바위"; break;
+				case 2 : com = "보"; break;
+				}
+				
+				System.out.printf("컴퓨터는 [%s]를 선택했습니다. \n", com);				
+				
+				//사용자와 컴퓨터 가위 바위 보 승패 판별
+				//가위,바위,보 의 경우의 수는 9개 _if else사용해서 9번 쓸 수 있지만 번거로움. 좀 더 쉬운 방법을 써보자.
+				//제일 판변하기 쉬운건 비기는 것 -> 이거 먼저
+			
+			
+				// String 비교 시 equals() 사용
+				if(player.equals(com)) {
+					System.out.println("비겼습니다.");
+					draw++;
+		
+				} else {
+					// 사용자 - 컴퓨터
+					// 가위 - 보
+					// 바위 - 가위
+					// 보 - 바위
+					
+					// 사용자가 이기는 경우에 true가 되는 상황을 미리 변수로 선언
+					boolean win1 = player.equals("가위") && com.equals("보"); //true
+					boolean win2 = player.equals("바위") && com.equals("가위");  //true
+					boolean win3 = player.equals("보") && com.equals("바위");  //true
+		
+						
+						if(win1 || win2 || win3) {  //이기는 경우
+							System.out.println("플레이어 승!");
+							win++;
+							
+						} else { //지는 경우
+							System.out.println("졌습니다ㅠㅠ");
+							lose++;
+							
+						}	
+				}	
+				System.out.printf("현재 기록 : %d승 %d무 %d패 \n", win, draw, lose);
+				
+				
+			}			
+			
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	public void rpsGame_me() {   //가위바위보
 		
 		   // 난수 이용
 		
@@ -287,12 +393,12 @@ public class BranchExample {
 			System.out.print("몇 판? : ");
 			int pan = sc.nextInt();
 			
-			int count = 0; // n번째 판
+			//int count = 0; // n번째 판
 			int winCount = 0; //승 카운트
 			int loseCount = 0; //패 카운트
 			int tieCount = 0; //무 카운트
 		
-			String rannum="";
+			String rannum="";  //=답지 풀이에서 com
 			String result = "";
 			
 			//몇 판인지 입력 받고, 그만큼 작동하는 for문 입력.
@@ -300,10 +406,10 @@ public class BranchExample {
 			
 			for(int i=1 ; i<=pan ; i++) {
 				
-				count++;
-				System.out.println(count + "번째 게임");
+				//count++;
+				System.out.println(i + "번째 게임");
 				System.out.print("가위/바위/보 중 하나를 입력해주세요 : ");
-				String input = sc.next();
+				String input = sc.next();  //플레이어 입력
 				
 				
 				switch(ran) {
