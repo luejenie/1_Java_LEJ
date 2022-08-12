@@ -3,7 +3,6 @@ package edu.kh.array.ex;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import javax.annotation.processing.SupportedSourceVersion;
 
 public class ArrayExample {
 
