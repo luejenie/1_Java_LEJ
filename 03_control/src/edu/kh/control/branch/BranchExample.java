@@ -349,6 +349,14 @@ public class BranchExample {
 	}
 
 	
+	/* String s1 = null;
+	 * String s2 = "";
+	 * 
+	 * 위 둘은 완전히 다른 것.
+	 * "" : 빈 문자열
+	 * null : 참조하는 것이 없다.
+	 * 
+	 * */
 	
 	
 	
