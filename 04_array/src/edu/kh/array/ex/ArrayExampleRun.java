@@ -5,8 +5,19 @@ public class ArrayExampleRun {
 		
 		ArrayExample arrayEx = new ArrayExample();
 		
-		arrayEx.ex1();
-		arrayEx.rpsGame();
+//		arrayEx.ex1();
+//		arrayEx.ex2();
+//		arrayEx.ex3();
+//		arrayEx.ex4();
+//		arrayEx.ex5();
+//		arrayEx.ex6();
+//		arrayEx.ex7();
+//		arrayEx.ex7();
+//		arrayEx.createLottoNumber();
+//		arrayEx.ex9();
+//		arrayEx.ex10();
+		arrayEx.ex11();
+		
 	}
 
 }
