@@ -416,24 +416,36 @@ public class LoopPractice {
 	
 	
 //9번 응용	
+	
+	/* 실습문제 11
+	다음과 같은 실행 예제를 구현하세요.
+	ex.
+	정수 입력 : 4
+	    *
+	   ***
+	  *****
+	 *******
+	*/
 	public void practice11() {
+		
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("정수 입력 : ");
 		int input = sc.nextInt();
-
-		for(int row=1 ; row<=input ; row++) {
-			
-			for(int i = input-1 ; i >=row; i--) {
-				System.out.println(" ");
-			}
-		}
-		//	for(int col = 1 ; col<=1) {
-			
-			
-			
 		
-	} //p11
+		for(int row = 1 ; row <= input ; row++ ) {
+			
+			// for문을 이용한 풀이
+			//for(int i = input-row ; i >= 1 ; i--) {
+			
+			/*for(int i = input-1 ; i >= row ; i--) {
+				System.out.print(" ");
+			}
+			
+			for(int col = 1 ; col <= row * 2 - 1 ; col++) {
+				System.out.print("*");
+			}
+			*/
 	
 	
 	//if문을 이용한 풀이
