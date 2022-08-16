@@ -140,7 +140,7 @@ public class ArrayExample {
 	
 	
 	public void ex3() {
-		// 2) for문을 이요한 초기화
+		// 2) for문을 이용한 초기화
 		
 		
 		// 5명의 키(cm)를 입력 받고 평균 구하기
@@ -366,14 +366,15 @@ public class ArrayExample {
 		//arr 배열 순차 접근(반복접근)
 		for(int i=0 ; i < arr.length; i++) {
 			
-			if( arr[i] == search ) {  //arr[i] 값이 입력 받ㅇㄴ 값과 같다면,
-			System.out.println(i + "번째 인덱스에 존재합니다.");
+			if( arr[i] == search ) {  //arr[i] 값이 입력 받은 값과 같다면,
+				System.out.println(i + "번째 인덱스에 존재합니다.");
 			
-			flag = false; //flag값을 변경
+				flag = false; //flag값을 변경
 			
-			break;  //중복 데이터가 없으면 추가 검색을 하지 않아도 됨. (break쓰는이유)
+				break;  //중복 데이터가 없으면 추가 검색을 하지 않아도 됨. (break쓰는이유)
 				
-			} 
+			}  //존재하지 않습니다를 else로 쓰면?  모든 인덱스를 거치기 때문에 매 인덱스마다 나옴.			
+//					else { System.out.println("존재하지 않습니다.");
 		}
 	
 		if(flag) {
@@ -415,7 +416,7 @@ public class ArrayExample {
 				if(lotto[x] == ran) {
 					i--;  //i값을 인위적으로 감소시켜
 						  // 바깥쪽 for의 증감식(i++)이 실행되었을 때
-					      // i 값이 현재 값을 유지하도록 마든다
+					      // i 값이 현재 값을 유지하도록 만든다
 					     // (화살표를 왼쪽 1칸 + 오른쪽 1칸 == 제자리)   ->>> 끝내고 1이 다시 증가하기 때문에 random도 다시 돌아감.
 				
 						break; // 추가 검사가 불필요하기 때문에 멈춤
