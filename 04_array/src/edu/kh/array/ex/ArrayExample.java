@@ -208,12 +208,12 @@ public class ArrayExample {
 		int[] arr = new int[3];
 		
 		for(int i=0 ; i <arr.length ; i++) {
-			System.out.println(arr[i]);
+			System.out.println("arr[i] : " + arr[i]);
 		}
 		
 		//차이 알아보기
 		// Arrays.toString(arr) : 배열에 저장된 모든 값을 한 줄로 간단히 출력
-		System.out.println(Arrays.toString(arr));
+		System.out.println("ArraystoString : " + Arrays.toString(arr));
 		
 	System.out.println("=================");
 	
@@ -221,7 +221,7 @@ public class ArrayExample {
 		//System.out.print(arr[i]);
 			
 		for(int i=0 ; i <arr.length ; i++) {
-			System.out.println(arr[i] + " ");  //출력하면 차이가 보임.
+			System.out.println("뒤에 공백 추가 " + arr[i] + " ");  //출력하면 차이가 보임. //
 		}
 
 	}
@@ -564,6 +564,11 @@ public class ArrayExample {
 		
 		
 	}
+	
+	
+	
+	
+	
 	
 	
 
