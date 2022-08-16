@@ -25,7 +25,7 @@ public class OperatorPractice4 {
 		//  int / double   -> int를 double로 변경해줌
 		
 		//평균을 저장하기 위한 변수
-		double avg = sum / 3.0 ;   //이부분 틀림! 자료형 주의!
+		double avg = sum / 3.0 ;   //이부분 틀림! 자료형 주의!  //자동 형변환 int/double -> int를 double로
 		String pass = (kor >= 40) && (eng >=40) &&	(math >= 40) && (avg >= 60) ? "합격" : "불합격" ;	
 		
 		System.out.println();
