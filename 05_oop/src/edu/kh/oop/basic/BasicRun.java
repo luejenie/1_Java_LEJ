@@ -17,7 +17,10 @@ public class BasicRun {
 		//System.out.println("비밀번호 : " + 이은지.password);
 		//The field LEJ.password is not visible. 에러. 보이지 않음.
 		
+	
+		//비밀번호를 볼 수 있는 기능을 호출 == 갑접 접근 방법
 		이은지.showPassword();
+	
 		
 		
 		// 기능 수행
