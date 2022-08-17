@@ -5,10 +5,24 @@ public class ArrayPracticeRun {
 		
 		ArrayPractice ap = new ArrayPractice();
 		
-//		ap.ap1();
-//		ap.ap2();
-//		ap.ap3();
-		ap.ap4();
+//		ap.practice1();
+//		ap.practice2();
+//		ap.practice3();
+//		ap.practice4();
+//		ap.practice5();
+//		ap.practice6();
+//		ap.practice7();
+//		ap.practice8();   //어려워 패스
+//		ap.practice9();
+//		ap.practice10();
+//		ap.practice11();
+//		ap.practice12();
+//		ap.practice13();  //패스
+		ap.practice14();  //패스
+		
+		
+			
+		
 	}
 
 }
