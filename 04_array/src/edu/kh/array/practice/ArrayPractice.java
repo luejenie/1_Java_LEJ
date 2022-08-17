@@ -409,13 +409,29 @@ public class ArrayPractice {
 			System.out.print( (i+1) + "번째 문자열 : ");
 			String str = sc.nextLine(); //next();로 하면 띄어쓰기를 받지 못함.	sc.nextLine();
 			arr[i] = str;
+		}	
+			System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
+			char inputyn = sc.next().charAt(0);
+			sc.nextLine();
 			
-		}
-		
+			if(inputyn == 'y' || inputyn == 'Y') {
+				System.out.print("더 입력하고 싶은 개수 : ");
+				int input2 = sc.nextInt();
+				sc.nextLine();
+				
+				for(int i=input+1 ; i <= i+input2 ; i++ ) {
+					System.out.print((input+1) + "번째 문자열 : ");
+					String str2 = sc.nextLine();
+					arr[i] = str2;
+					
+				}
 
-		
-		
-		
+			} else {
+					
+					System.out.print(Arrays.toString(arr));
+				
+			}
+			
 		
 	}
 	
