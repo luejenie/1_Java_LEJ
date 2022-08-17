@@ -401,34 +401,18 @@ public class ArrayPractice {
 		
 		System.out.print("배열의 크기를 입력하세요 : ");
 		int input = sc.nextInt();
+		sc.nextLine();
 		
 		String[] arr = new String[input]; //사용자가 입력한 배열의 길이만큼의 String 배열을 선언 및 할당
 		
 		for(int i=0 ; i < arr.length ; i++) {
 			System.out.print( (i+1) + "번째 문자열 : ");
-			String str = sc.next(); //next();로 하면 띄어쓰기를 받지 못함.	sc.nextLine();
+			String str = sc.nextLine(); //next();로 하면 띄어쓰기를 받지 못함.	sc.nextLine();
 			arr[i] = str;
+			
 		}
 		
-//		String yesno = "";
-//		
-//		System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
-//		yesno = sc.next();  // 0?
-//		
-//		if(yesno.equals("y") || yesno.equals("Y")) {
-//			System.out.print("더 입력하고 싶은 개수 : ");
-//			int input2 = sc.nextInt();
-//			
-//			
-//			for(int x= input+input2 ; x<arr.length ; x++) {
-//				System.out.print( x + "번째 문자열 : \n");
-//				String str = sc.next();		
-//				arr[x] = str;
-//			}
-//			
-//		} else {
-//			System.out.println(Arrays.toString(arr));
-//		}
+
 		
 		
 		
