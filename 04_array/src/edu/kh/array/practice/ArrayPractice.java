@@ -23,7 +23,7 @@ public class ArrayPractice {
 			}
 			
 		}
-		
+		=
 		System.out.println("\n짝수 번째 인덱스 합 : " + sum);
 
 		
@@ -408,6 +408,7 @@ public class ArrayPractice {
 		for(int i=0 ; i < arr.length ; i++) {
 			System.out.print( (i+1) + "번째 문자열 : ");
 			String str = sc.nextLine(); //next();로 하면 띄어쓰기를 받지 못함.	sc.nextLine();
+										// nextLine()을 제외한 모든 것 뒤에 sc.nextLine()을 한 번 더 붙여주기
 			arr[i] = str;
 		}	
 			System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
@@ -421,8 +422,8 @@ public class ArrayPractice {
 				
 				for(int i=input+1 ; i <= i+input2 ; i++ ) {
 					System.out.print((input+1) + "번째 문자열 : ");
-					String str2 = sc.nextLine();
-					arr[i] = str2;
+					String str = sc.nextLine();
+					arr[i] = str;   //이부분이 문제!
 					
 				}
 
