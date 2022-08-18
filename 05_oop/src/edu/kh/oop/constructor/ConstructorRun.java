@@ -26,7 +26,7 @@ public class ConstructorRun {
 		
 				
 		Member member6 = new Member("아이디", "비밀번호비밀", "01012345678", 11);  
-		//Member member7 = new Member("idididid", "pwpwpwpw", "01001010101", 20);  
+		Member member7 = new Member("idididid", "pwpwpwpw", "01001010101", 20);  
 				
 				
 		

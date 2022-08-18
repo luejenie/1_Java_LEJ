@@ -1,7 +1,7 @@
 package edu.kh.oop.cls.ex1;
 
 public class Test1 {
-//class Text1 {  //ok. 디폴트. 같은 클래스 내에서 가능
+//class Test1 {  //ok. 디폴트. 같은 클래스 내에서 가능
 //protected class Test1 {  //에러
 //default class Test1 { //에러
 //private class Test1 { //에러
