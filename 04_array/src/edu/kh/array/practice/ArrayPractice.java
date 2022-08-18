@@ -395,7 +395,7 @@ public class ArrayPractice {
 	
 	
 	
-	public void practice14() {
+	public void practice14() { //얕은 복사, 깊은 복사 사용
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -422,8 +422,8 @@ public class ArrayPractice {
 				
 				for(int i=input+1 ; i <= i+input2 ; i++ ) {
 					System.out.print((input+1) + "번째 문자열 : ");
-					String str = sc.nextLine();
-					arr[i] = str;   //이부분이 문제!
+					String str2 = sc.nextLine();
+					;   //이부분이 문제!
 					
 				}
 
@@ -438,9 +438,72 @@ public class ArrayPractice {
 	
 	
 	
+	public void practice15() {
+		
+		String[][] arr = new String[3][3];
+	
+		
+		for(int row=0; row<arr.length; row++) {
+			
+			
+			for(int col=0; col<arr[row].length; col++) {
+				
+				arr[row][col] = "(row, col)";
+				
+				System.out.printf("(%d, %d)", row, col);
+				
+			}
+			
+			System.out.println();
+		}
+
+	}
+	
+	
+	public void practice16() {
+		
+		int[][] arr = new int[4][4];
+		
+		int i=0;
+		
+		for(int row=0; row<arr.length ; row++) {
+			
+			for(int col=0; col<arr[row].length; col++) {
+
+					arr[row][col] = i++;
+					
+					System.out.printf("%2d ", i);
+			}
+			
+			System.out.println();
+		}
+
+	}
 	
 	
 	
+	public void practice17() {
+		
+		int[][] arr = new int[4][4];
+		
+		int row=0;
+		int i= (arr.length * arr[row].length);
+		
+		for(row=0; row<arr.length ; row++) {
+			
+			for(int col=0; col<arr[row].length; col++) {
+				
+
+					arr[row][col] = i--;
+					
+					System.out.printf("%2d ", i);
+			}
+			
+			System.out.println();
+		}
+		
+		
+	}
 	
 	
 	
