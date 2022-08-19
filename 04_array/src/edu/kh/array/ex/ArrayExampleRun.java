@@ -24,7 +24,7 @@ public class ArrayExampleRun {
 //		arrayEx2.ex1();
 //		arrayEx2.ex2();
 //		arrayEx2.ex3();
-//		arrayEx2.ex4();
+		arrayEx2.ex4();
 		
 		
 		ArrayExampleLEJ arrayExLEJ = new ArrayExampleLEJ();
@@ -35,7 +35,7 @@ public class ArrayExampleRun {
 //		arrayExLEJ.lotto();
 // 2차원배열 예시
 //		arrayExLEJ.ext2();
-		arrayExLEJ.ext3();
+//		arrayExLEJ.ext3();
 		
 		
 		

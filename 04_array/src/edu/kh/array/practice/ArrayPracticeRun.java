@@ -21,7 +21,13 @@ public class ArrayPracticeRun {
 //		ap.practice14();  //패스
 //		ap.practice15();  
 //		ap.practice16();  
-		ap.practice17();  
+//		ap.practice17();  //다시 확인
+//		ap.practice18();  
+//		ap.practice19();  //복잡. 한 번 더 확인
+		ap.practice20();  
+		
+		
+		
 		
 		
 			

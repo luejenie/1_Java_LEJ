@@ -163,8 +163,8 @@ public class ArrayPractice {
 		
 		
 		
-		for(int i=0; i<arr.length; i++) {   //위에 for문과 변수를 똑같이 해도 되는지 
-											// 하나로 for문을 합치는 법은 없는지
+		for(int i=0; i<arr.length; i++) {   // for문은 계속 나눠서 해야하나?? 합칠 수는 없나?
+			
 			System.out.print(arr[i]+ " ");				
 		}
 
@@ -487,13 +487,12 @@ public class ArrayPractice {
 		int[][] arr = new int[4][4];
 		
 		int row=0;
-		int i= (arr.length * arr[row].length);
+		int i= (arr.length * arr[row].length) +1;    // 다시 확인하기!
 		
 		for(row=0; row<arr.length ; row++) {
 			
 			for(int col=0; col<arr[row].length; col++) {
 				
-
 					arr[row][col] = i--;
 					
 					System.out.printf("%2d ", i);
@@ -507,15 +506,127 @@ public class ArrayPractice {
 	
 	
 	
+	public void practice18() {
+		
+		int[][] arr = new int[4][4];
+		
+		
+		
+		for(int row=0 ; row < arr.length-1; row++) {
+			for(int col=0 ; col < arr[row].length -1 ; col ++) {
+				
+				int ran = (int)(Math.random() * 10 + 1);  // 1~10까지의 임의의 정수
+				arr[row][col] = ran;	
+				
+				//직전 행, 열까지만 더하고,
+				arr[row][arr[row].length-1] += ran;   // 각 행의 마지막 열
+				arr[arr.length-1][col] += ran;        // 각 열의 마지막 행
+				arr[arr.length-1][arr[row].length-1] += ran;  // 제일 마지막 행, 열
+		
+				
+			}
+		}
+			
+		//여기서 마지막 행, 열
+		for(int row=0; row<arr.length; row++) {
+			for(int col=0; col<arr[row].length; col++) {
+				
+				System.out.printf("%3d ", arr[row][col]);
+				
+			}
+			System.out.println();
+		}
+		
+	}
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
+	public void practice19() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		while(true) {
+		
+			System.out.print("행 크기 : ");
+			int rowInput = sc.nextInt();
+			
+			System.out.print("열 크기 : ");
+			int colInput = sc.nextInt();
+			
+			char[][] arr = new char[rowInput][colInput];
+			
+			
+			// 입력받은 숫자가 1~10이 아닐때
+			boolean input1 = rowInput < 1 || rowInput > 10 ;
+			boolean input2 = colInput < 1 || colInput > 10 ;
+			
+			if(input1 || input2) {
+				
+				System.out.println("반드시 1~10 사이의 정수를 입력해야 합니다.");
+				
 
+			}  else {
+				
+				for(int row=0 ; row < rowInput; row++) {
+					for(int col=0; col < colInput; col++) {
+						
+						int ran = (int)(Math.random() *26 +(int)'A');
+						arr[row][col] = (char)ran;
+
+					}
+				}
+				
+				for(int row=0 ; row < rowInput; row++) {
+					for(int col=0; col < colInput; col++) {
+						
+						System.out.print(arr[row][col] + " ");
+						
+					}
+					System.out.println();  //줄바꿈
+				}
+				break;
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	public void practice20() {   //여기서부터 다시
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("행의 크기 : ");
+		int rowInput = sc.nextInt();
+		
+		
+		int colInput;
+		
+		int[][] arr = new int[rowInput][];
+		
+		// arr[0~rowInput] = new int[colInput]
+		
+		
+		for(int i=0 ; i < rowInput; i++) {
+			System.out.print( i + "열의 크기 :");
+			colInput = sc.nextInt();
+		
+			
+			for(int row=0; row<rowInput; row++) {
+				for(int col=0; col<colInput; col++) {
+					
+					arr[row] = new int[colInput];
+					System.out.print(arr[row][col] + " ");
+				}
+				
+				System.out.println();
+			}
+		
+			
+		}
+	}
 }
