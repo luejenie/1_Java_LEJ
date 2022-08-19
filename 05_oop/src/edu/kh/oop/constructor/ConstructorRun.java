@@ -1,6 +1,7 @@
 package edu.kh.oop.constructor;
 
 import edu.kh.oop.constructor.model.vo.Member;
+import edu.kh.oop.field.model.vo.Temp;
 
 public class ConstructorRun {
 	
@@ -29,6 +30,9 @@ public class ConstructorRun {
 		Member member7 = new Member("idididid", "pwpwpwpw", "01001010101", 20);  
 				
 				
+		
+		
+		Temp ti = new Temp();
 		
 		
 		
