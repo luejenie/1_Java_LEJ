@@ -23,7 +23,7 @@ public class ArrayPractice {
 			}
 			
 		}
-		=
+		
 		System.out.println("\n짝수 번째 인덱스 합 : " + sum);
 
 		
@@ -596,37 +596,62 @@ public class ArrayPractice {
 	
 	
 	
-	public void practice20() {   //여기서부터 다시
+	public void practice20() {   
 		
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("행의 크기 : ");
 		int rowInput = sc.nextInt();
+
+		// arr[0~rowInput] = new int[colInput]
+//		int[][] arr = new int[5][];  //열 안씀
+//		
+//		arr[0] = new int[3];
+//		arr[1] = new int [4];
+//		arr[2] = new int [5];
+//		arr[3] = new int [2];
+//		arr[4] = new int [1];
 		
-		
+	
 		int colInput;
 		
-		int[][] arr = new int[rowInput][];
-		
-		// arr[0~rowInput] = new int[colInput]
-		
+		boolean flag = true;
 		
 		for(int i=0 ; i < rowInput; i++) {
-			System.out.print( i + "열의 크기 :");
-			colInput = sc.nextInt();
-		
+			System.out.print( i + "열의 크기 : ");
+			colInput = sc.nextInt();	
+			  
+			char[][] arr = new char[i][colInput]; 	//가변배열
 			
-			for(int row=0; row<rowInput; row++) {
-				for(int col=0; col<colInput; col++) {
+			
+			if? {
+				for(int row=0; row<rowInput; row++) {
+					for(int col=0; col<colInput; col++){
+						
+						System.out.println(arr[row][colInput] + " ");
+					}
 					
-					arr[row] = new int[colInput];
-					System.out.print(arr[row][col] + " ");
+				 System.out.println();	
 				}
 				
-				System.out.println();
 			}
+		}	
 		
+		
+		
+	
 			
-		}
+//			for(int row=0; row<rowInput; row++) {
+//				for(char col = 'a'; col < colInput; col++) {
+//					
+//					
+//		
+//					arr[row] = new int[colInput];
+//					System.out.print(arr[row][col] + " ");
+//				}
+//				
+//				System.out.println();
+//			}
+
 	}
 }
