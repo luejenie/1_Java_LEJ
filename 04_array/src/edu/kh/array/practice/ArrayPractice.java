@@ -812,6 +812,10 @@ public class ArrayPractice {
 	}
 		
 	
+	
+	
+	
+	
 	public void practice24() {
 		
 		Scanner sc = new Scanner(System.in);
@@ -851,44 +855,12 @@ public class ArrayPractice {
 					}
 					System.out.println();
 				}
-				
-			
-			}
-			
-			
-			
-			
-//			System.out.print("행 인덱스 입력 >> ");
-//			int input = sc.nextInt();
-//			
-//			if(input == 99) {
-//				System.out.println("프로그램 종료");
-//				break;
-//			} else {
-//				continue;
-//			}
-			
-			
-			
 
+			}
 		}
 		
 	}
 
-		
-				
-	
-		
-		
-		
-		
-		
-		
-
-	
-	
-	
-	
 	
 	
 	
