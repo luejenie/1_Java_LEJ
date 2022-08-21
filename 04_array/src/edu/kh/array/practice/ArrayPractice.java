@@ -601,7 +601,7 @@ public class ArrayPractice {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("행의 크기 : ");
-		int rowInput = sc.nextInt();
+		int rowInput = sc.nextInt();   //사용자에게 행의 크기를 입력 받고
 
 		// arr[0~rowInput] = new int[colInput]
 //		int[][] arr = new int[5][];  //열 안씀
@@ -612,46 +612,285 @@ public class ArrayPractice {
 //		arr[3] = new int [2];
 //		arr[4] = new int [1];
 		
-	
-		int colInput;
 		
-		boolean flag = true;
-		
-		for(int i=0 ; i < rowInput; i++) {
-			System.out.print( i + "열의 크기 : ");
-			colInput = sc.nextInt();	
-			  
-			char[][] arr = new char[i][colInput]; 	//가변배열
+		for(int i=0 ; i <= rowInput; i++) {   //그 수만큼의 반복을 통해
+			System.out.print( i + "열의 크기 : ");  
+			int colInput = sc.nextInt();	 //열의 크기도 입력 받아
+				
+			int[][] arr = new int[i][colInput]; 	//문자형 가변배열을 선언 및 할당하세요.
 			
-			
-			if? {
+			if(i == rowInput) {
 				for(int row=0; row<rowInput; row++) {
 					for(int col=0; col<colInput; col++){
 						
 						System.out.println(arr[row][colInput] + " ");
 					}
-					
-				 System.out.println();	
+					System.out.println();	
 				}
 				
 			}
-		}	
-		
-		
+		}
+			
+		}
+			
+
 		
 	
+	public void practice21() {
+
+		
+		String[] students = {"강건강", "남나나", "도대담", "류라라", "문미미","박보배","송성실",
+				"윤예의", "진재주", "차천축", "피풍표", "홍하하"};
+		
+		String[][] part1 = {
+							{"강건강", "남나나"}, 
+							{"도대담", "류라라"}, 
+							{"문미미", "박보배"}
 			
-//			for(int row=0; row<rowInput; row++) {
-//				for(char col = 'a'; col < colInput; col++) {
+							};
+		
+		String[][] part2 = {
+							{"송성실", "윤예의"}, 
+							{"진재주", "차천축"}, 
+							{"피풍표", "홍하하"}	
+							};
+							
+//		System.out.print(part1 + " ");  // cf. 주소값 출력
+
+		
+		System.out.println("== 1분단 ==");
+
+		for(int row=0; row<part1.length; row++) {
+			for(int col=0; col<part1[row].length; col++) {
+			
+				System.out.print(part1[row][col] + " ");
+		
+			}
+			System.out.println();
+		}
+		
+		
+		System.out.println("==2분단==");
+		for(int row=0; row<part2.length; row++) {
+			for(int col=0; col<part2[row].length; col++) {
+				
+				System.out.print(part2[row][col] + " ");
+				
+			}
+			System.out.println();
+		}
+		
+		
+		
+		
+	}
+	
+	
+	public void practice22() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+			
+		String[][] part1 = {
+					{"강건강", "남나나"}, 
+					{"도대담", "류라라"}, 
+					{"문미미", "박보배"}
+					};
+	
+		String[][] part2 = {
+					{"송성실", "윤예의"}, 
+					{"진재주", "차천축"}, 
+					{"피풍표", "홍하하"}	
+					};
+
+		
+		//출력
+		System.out.println("== 1분단 ==");	
+		for(int row=0; row<part1.length; row++) {
+			for(int col=0; col<part1[row].length; col++) {
+				
+				System.out.print(part1[row][col] + " ");
+				
+			}
+			System.out.println();
+		}
+	
+	
+		System.out.println("==2분단==");
+		for(int row=0; row<part2.length; row++) {
+			for(int col=0; col<part2[row].length; col++) {
+				
+				System.out.print(part2[row][col] + " ");
+				
+			}
+			System.out.println();
+		}
+		
+		
+		// 검색
+		
+		System.out.println("========================");
+		System.out.print("검색할 학생 이름을 입력하세요 : ");
+		String stdName = sc.next();
+		
+		
+
+		
+		
+		for(int row=0; row<part1.length; row++) {
+			for(int col=0; col<part1[row].length; col++) {
+	
+				if( part1[row][col] == stdName) {
+					
+						System.out.printf("검색하신 %s 학생은 1분단 %d번째 줄 왼쪽에 있습니다.", stdName, row);
+					
+				}
+			}
+		}
+		
+//		for(int row=0; row<part2.length; row++) {
+//			for(int col=0; col<part2[row].length; col++) {
+//				
+//				if( part2[row][col] == stdName) {
 //					
-//					
-//		
-//					arr[row] = new int[colInput];
-//					System.out.print(arr[row][col] + " ");
+//					if(col == 0) {
+//						System.out.printf("검색하신 %s 학생은 2분단 %d번째 줄 왼쪽에 있습니다.", stdName, row);
+//						
+//					} else {
+//						
+//						System.out.printf("검색하신 %s 학생은 2분단 %d번째 줄 오른쪽에 있습니다.", stdName, row);
+//					}
 //				}
 //				
-//				System.out.println();
+//			
 //			}
+//			System.out.println();
+//		}
+		
 
+	
 	}
+			
+
+	public void practice23() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		//char[][] arr = new char[6][6];
+		
+		char[][] arr = { 
+						{' ', '0', '1', '2', '3', '4' },
+						{'0', ' ', ' ', ' ', ' ', ' ' },
+						{'1', ' ', ' ', ' ', ' ', ' ' },
+						{'2', ' ', ' ', ' ', ' ', ' ' },
+						{'3', ' ', ' ', ' ', ' ', ' ' },
+						{'4', ' ', ' ', ' ', ' ', ' ' },	
+						};
+					
+		
+		
+		System.out.print("행 인덱스 입력 : ");
+		int rowInput = sc.nextInt();   //실제 인덱스는 row+1
+		
+		System.out.print("열 인덱스 입력 : ");
+		int colInput = sc.nextInt();
+		
+		
+		
+		for(int row = 0 ; row < arr.length ; row++) {
+			for(int col = 0 ; col<arr[row].length; col++) {	
+	
+					if(row==rowInput+1 && col==colInput+1) {
+												
+						arr[row][col] = 'X';
+					}
+	
+					System.out.print(arr[row][col] + " ");
+				}
+				System.out.println();
+		}
+	}
+		
+	
+	public void practice24() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		char[][] arr = { 
+						{' ', '0', '1', '2', '3', '4' },
+						{'0', ' ', ' ', ' ', ' ', ' ' },
+						{'1', ' ', ' ', ' ', ' ', ' ' },
+						{'2', ' ', ' ', ' ', ' ', ' ' },
+						{'3', ' ', ' ', ' ', ' ', ' ' },
+						{'4', ' ', ' ', ' ', ' ', ' ' },	
+						};
+					
+		
+		while(true) {
+			System.out.print("행 인덱스 입력 : ");
+			int rowInput = sc.nextInt();   //실제 인덱스는 row+1
+			
+			if(rowInput == 99) {
+				System.out.println("프로그램 종료");
+				break;
+			
+			} else {
+		
+				System.out.print("열 인덱스 입력 : ");
+				int colInput = sc.nextInt();
+				
+				for(int row = 0 ; row < arr.length ; row++) {
+					for(int col = 0 ; col<arr[row].length; col++) {	
+						
+						if(row==rowInput+1 && col==colInput+1) {
+							
+							arr[row][col] = 'X';
+						}
+						
+						System.out.print(arr[row][col] + " ");
+					}
+					System.out.println();
+				}
+				
+			
+			}
+			
+			
+			
+			
+//			System.out.print("행 인덱스 입력 >> ");
+//			int input = sc.nextInt();
+//			
+//			if(input == 99) {
+//				System.out.println("프로그램 종료");
+//				break;
+//			} else {
+//				continue;
+//			}
+			
+			
+			
+
+		}
+		
+	}
+
+		
+				
+	
+		
+		
+		
+		
+		
+		
+
+	
+	
+	
+	
+	
+	
+	
+	
 }
