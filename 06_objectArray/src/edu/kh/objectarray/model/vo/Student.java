@@ -65,6 +65,56 @@ public class Student {
 	}
 
 
+	public int getClassRoom() {
+		return classRoom;
+	}
+
+
+	public void setClassRoom(int classRoom) {
+		this.classRoom = classRoom;
+	}
+
+
+	public int getNumber() {
+		return number;
+	}
+
+
+	public void setNumber(int number) {
+		this.number = number;
+	}
+
+
+	public int getKor() {
+		return kor;
+	}
+
+
+	public void setKor(int kor) {
+		this.kor = kor;
+	}
+
+
+	public int getEng() {
+		return eng;
+	}
+
+
+	public void setEng(int eng) {
+		this.eng = eng;
+	}
+
+
+	public int getMath() {
+		return math;
+	}
+
+
+	public void setMath(int math) {
+		this.math = math;
+	}
+
+
 	// alt + (shift) + s 또는  Source 메뉴
 	// -> r (Generate Getters and Setters... 선택)
 	
