@@ -14,6 +14,18 @@ import edu.kh.objectarray.model.vo.Student;
  * @author user1
  *
  */
+/**
+ * @author user1
+ *
+ */
+/**
+ * @author user1
+ *
+ */
+/**
+ * @author user1
+ *
+ */
 public class StudentManagementView {
 	
 	//필드 == 멤버변수
@@ -53,7 +65,7 @@ public class StudentManagementView {
 			case 1: addStudent(); break;
 			case 2: printAll(); break;
 			case 3: selectIndex(); break;
-			case 4: break;
+			case 4: selectName(); break;
 			case 5: updateStudent(); break;
 			case 0: System.out.println("프로그램을 종료합니다."); break;
 			default: System.out.println("잘못 입력하셨습니다.");
@@ -194,6 +206,68 @@ public class StudentManagementView {
 		}
 
 	}
+	
+	
+	
+	
+	/**
+	 * 학생 정보 조회(이름) 메서드
+	 */
+	public void selectName() {
+		System.out.println("[학생 정보 조회(이름)]");
+		System.out.print("이름 : ");
+		String name = sc.next();
+		
+		//학생 정보 조회(이름) 서비스 메서드 호출 후 결과 반환
+		Student[] resultArr = service.selectName(name);
+		// 마우스 대면 Student[] edu.kh.objectarray.model.service.StudentManagementService.selectName(String name)
+		//         맨 앞이 반환되는 배열을 의미. 여기서는 Student[] 
+		
+		if(resultArr == null) {
+			System.out.println("검색 결과가 없습니다.");
+		} else {
+			
+			
+			for(int i=0; i<resultArr.length ; i++) {
+				
+				if(resultArr[i] == null) { // 검색 결과가 더 이상 없음
+					break;
+				}
+				
+				// 홍길동(3학년 5반 17번)   // for문으로 출력
+				System.out.printf("%s (%d학년 %d반 %d번)\n", 
+								resultArr[i].getName(), 
+								resultArr[i].getGrade(), 
+								resultArr[i].getClassRoom(),
+								resultArr[i].getNumber());
+				
+			}
+			
+			
+			
+		}
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

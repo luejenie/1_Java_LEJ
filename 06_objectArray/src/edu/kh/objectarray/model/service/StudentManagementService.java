@@ -139,18 +139,56 @@ public class StudentManagementService {
 			}
 				
 		}
+	}
+	
+	
+	/** 학생 정보 조회(이름) 서비스 메서드
+	 * @param name(입력받은 이름)
+	 * @return 은 아래 두 경우 중 하나
+	 * null : 검색 결과 X
+	 * result (null 아님) : 검색 결과 O
+	 */
+	public Student[] selectName(String name) {
+		
+		// stdArr 객체 배열의 각 인덱스가 참조하는 Student 객체가 있음.
+		// Student 객체의 필드 값 중 name과 입력 받은 name이 일치하면
+		// 해당 Student 객체의 주소를 별도 객체 배열에 저장해서
+		// 메서드 종료 시 반환     ___ return 반환은 무조건 하나만 가능함.
+		
+		//검색 결과 저장용 객체 배열     _바구니 배열을 만들자
+		Student[] resultArr = new Student[stdArr.length];
+		
+		// resultArr에서 값을 대입할 인덱스 번호를 나타내는 변수 ★★★
+		int resultIdx = 0;
 		
 		
+		//stdArr 배열에 순차 접근
+		for(int i=0 ; i<stdArr.length ; i++) {
+			
+			if(stdArr[i] == null) {
+				break;   // 반복 종료.     ___없는 부분이 끝부분이기 때문에 break
+			}
+			
+			
+			// 학생 이름 == 입력 이름이 같으면 
+			if(stdArr[i].getName().equals( name )) {   // _equals 이용해서 비교!
+				resultArr[resultIdx] = stdArr[i];
+						
+				resultIdx++;  // 대입되는 인덱스를 다음으로 이동
+			}
+		}
+		
+		// 검색이 아무도 되지 않은 경우    _resultIndex가 초기화값 그대로 나옴.
+		if(resultIdx==0) {
+			return null;		
+		}
+		
+		else {
+			return resultArr;
+		}
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
+
 	}
 	
 	
