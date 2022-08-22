@@ -218,7 +218,7 @@ public class ArrayPractice {
 		int[] arr = new int[input];
 		
 		
-		if(input / 2 //== ) {  
+		//if(input / 2 //== ) {  
 			for(int i=0 ; i < (arr.length /2 + 1); i++) {
 				arr[i] = (i+1);
 				System.out.print(arr[i] + " ");
@@ -234,9 +234,9 @@ public class ArrayPractice {
 //			System.out.println("다시 입력하세요.");
 //		}
 		
-	}
+}
 	
-	}
+	
 	
 	
 	
