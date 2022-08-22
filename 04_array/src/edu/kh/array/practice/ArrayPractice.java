@@ -218,7 +218,7 @@ public class ArrayPractice {
 		int[] arr = new int[input];
 		
 		
-		//if(input / 2 //== ) {  
+		//if(input == ) {  
 			for(int i=0 ; i < (arr.length /2 + 1); i++) {
 				arr[i] = (i+1);
 				System.out.print(arr[i] + " ");
@@ -374,14 +374,11 @@ public class ArrayPractice {
 		
 		System.out.print("문자열에 있는 문자 : ");
 		for(int i=0; i<arr.length ; i++) {
-			arr[i] = input.charAt(i);
-			count++;
 			
-		  //문자 중복
-			if(arr[i] == input.charAt(i)) {
-				//arr[i] = ;
-				break;				
-			}
+				arr[i] = input.charAt(i);
+				count++;
+				
+			
 	
 					
 			System.out.print(arr[i] + ", ");
