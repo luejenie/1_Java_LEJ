@@ -11,7 +11,7 @@ public class BingoGame {
 		System.out.print("빙고판 크기 지정 : ");
 		int size = sc.nextInt();
 		
-		char[][] arr = new char[size][size];  //빙고판
+		int[][] arr = new int[size][size];  //빙고판
 		
 		for(int row=0 ; row<arr.length ; row++) {
 			for(int col=0; col<arr[row].length ; col++) {
@@ -24,7 +24,7 @@ public class BingoGame {
 		}
 		
 		
-		
+	
 		System.out.println("=========빙고게임 시작=========");
 	
 
@@ -63,9 +63,9 @@ public class BingoGame {
 	
 		
 		
+
 		
 	}
-	
 	
 
 }
