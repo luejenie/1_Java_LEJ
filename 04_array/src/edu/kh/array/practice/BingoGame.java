@@ -11,13 +11,13 @@ public class BingoGame {
 		System.out.print("빙고판 크기 지정 : ");
 		int size = sc.nextInt();
 		
-		int[][] arr = new int[size][size];  //빙고판
+		char[][] arr = new char[size][size];  //빙고판
 		
 		for(int row=0 ; row<arr.length ; row++) {
 			for(int col=0; col<arr[row].length ; col++) {
 				
 				int ran = (int)(Math.random() * (size*size)+1);   //중복값 제거 해야하나?
-				arr[row][col] = ran;   //정수 난수 무작위 배치	
+				arr[row][col] = (char)ran;   //정수 난수 무작위 배치	
 				System.out.printf("%5d" , arr[row][col]);
 			}
 			System.out.println();
@@ -41,7 +41,7 @@ public class BingoGame {
 					
 					if(arr[row][col] == num) {
 						
-						arr[row][col] = 0;   //일단 별 대신 0을 찍는다고 하고..
+						arr[row][col] = '★';   //일단 별 대신 0을 찍는다고 하고..
 						//count++;
 					
 					} 

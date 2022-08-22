@@ -218,7 +218,7 @@ public class ArrayPractice {
 		int[] arr = new int[input];
 		
 		
-		if(input > 3 && input %2 == 1) {  //3이상인 홀수
+		if(input / 2 //== ) {  
 			for(int i=0 ; i < (arr.length /2 + 1); i++) {
 				arr[i] = (i+1);
 				System.out.print(arr[i] + " ");
@@ -228,7 +228,7 @@ public class ArrayPractice {
 //				arr[i] = arr[i]-1; 
 //				System.out.print(arr[i] + " ");
 //			}
-//		}     //모르겠다..
+//		}     //
 		
 //		else {
 //			System.out.println("다시 입력하세요.");
@@ -377,12 +377,12 @@ public class ArrayPractice {
 			arr[i] = input.charAt(i);
 			count++;
 			
-//			for(int x=0 ; x<i ; x++) {   //문자 중복은 어찌해야하나..
-//				if(arr[x] == input.charAt(i)) {
-//					i--;
-//					break;				
-//				}
-//			}
+		  //문자 중복
+			if(arr[i] == input.charAt(i)) {
+				//arr[i] = ;
+				break;				
+			}
+	
 					
 			System.out.print(arr[i] + ", ");
 			
