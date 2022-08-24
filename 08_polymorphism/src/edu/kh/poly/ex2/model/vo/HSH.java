@@ -11,6 +11,7 @@ package edu.kh.poly.ex2.model.vo;
 
 public class HSH implements KH{  // 황석현(A반 학생)
 	
+	//생성자
 	public HSH() {
 		super(); 
 	}

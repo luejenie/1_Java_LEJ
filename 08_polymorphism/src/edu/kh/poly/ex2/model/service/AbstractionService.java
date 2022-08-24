@@ -38,7 +38,7 @@ public class AbstractionService {
 		
 		
 		
-		// 추상 메서드였던 breath() 호출 가능 여부 확인     _동적바인딩 화깅
+		// 추상 메서드였던 breath() 호출 가능 여부 확인     _동적바인딩 확인
 		a1.breath();
 		a2.breath();
 		// 실행 전에는 Animal의 breath()와 연결된 것으로 보임(정적 바인딩)
@@ -82,7 +82,7 @@ public class AbstractionService {
 		HSH sh1 = new HSH();
 		HGD gd1 = new HGD();
 		
-		sh1.lesson();
+		sh1.lesson(); 
 		gd1.lesson();
 		
 		// 클래스/추상 클래스를 상속한 자식 객체는

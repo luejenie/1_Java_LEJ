@@ -9,8 +9,9 @@ public class Run {
 		
 //		service.ex1();
 //		service.ex2();
-		service.ex3();
+//		service.ex3();
 				
+
 		
 	}
 
