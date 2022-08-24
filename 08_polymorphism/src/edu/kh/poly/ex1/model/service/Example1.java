@@ -86,7 +86,7 @@ public class Example1 {
 	
 	// 매개변수의 다형성 적용
 	public void printCar(Car c) {
-		System.out.println("자동차 정보" + c.toString());
+		System.out.println("자동차 정보 " + c.toString());
 		// 전달 받은 객체가 자식 객체이고
 		// toString()을 오버라이딩 했다면,
 		// 동적 바인딩을 이용해서 자식 toString()으로 호출
