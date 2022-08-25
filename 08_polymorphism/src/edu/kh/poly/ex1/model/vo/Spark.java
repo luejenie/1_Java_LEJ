@@ -6,7 +6,7 @@ public class Spark extends Car {
 	
 	public Spark() { }
 
-	// alt + shift + s -> o  // 셀렉트박스에 아래 내용으로.
+	// 매개변수 생성자 alt + shift + s -> o  // 셀렉트박스에 아래 내용으로.
 	public Spark(int wheel, int seat, String fuel, double discountOffer) {
 		super(wheel, seat, fuel);
 		this.discountOffer = discountOffer;

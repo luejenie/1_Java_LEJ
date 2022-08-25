@@ -35,7 +35,7 @@ public class Example1 {
 		
 		
 		// 바인딩
-		// System.out.println( c1.toString() );
+//		 System.out.println( c1.toString() );
 		
 		// 정적 바인딩 
 		// : 프로그램 실행 전 메서드 호출부-메서드 코드 연결

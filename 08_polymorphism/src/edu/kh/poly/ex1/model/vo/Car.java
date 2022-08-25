@@ -59,7 +59,7 @@ public class Car /* extends Object */{
 	//   하나의 문자열로 반환할 수 있도록 
 	//	 Java에서 제공해주는 메서드 
 	// - 자식 클래스에서 오버라이딩 해서 사용    _자식마다 필드가 다르기 떄문에.
-	
+	 
 	@Override
 	public String toString() {
 		// [출력화면] wheel : 4 / seat : 5 / fuel : 경유
