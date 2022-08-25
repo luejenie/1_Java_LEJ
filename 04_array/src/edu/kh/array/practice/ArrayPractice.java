@@ -15,11 +15,11 @@ public class ArrayPractice {
 		
 		for(int i=0 ; i<arr.length ; i++) {
 			
-			arr[i] += (i+1);   //이 부분 맞는지 확인 (밑에서 계속 사용함_ 꼭 확인하기)
+			arr[i] += (i+1);   //이 부분 맞는지 확인 (밑에서 계속 사용함_ 꼭 확인하기)_맞음
 			System.out.print(arr[i] + " ");
 			
-			if((i==0) || (i % 2 == 0)) {   //짝수 번째 인덱스 = 1, 3, 5, 7 ...
-				sum += arr[i];
+			if(/*(i==0) || */(i % 2 == 0)) {   //짝수 번째 인덱스 = 1, 3, 5, 7 ...
+				sum += arr[i];                 // 문제에 0인덱스는 짝수로 취급한다고 써있음
 			}
 			
 		}
@@ -58,10 +58,11 @@ public class ArrayPractice {
 	public void practice3() {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("양의 정수 : ");
-		int input = sc.nextInt();
+		System.out.print("양의 정수 : ");		
+//		int input = sc.nextInt();		
+//		int[] arr = new int[input];
 		
-		int[] arr = new int[input];
+		int[] arr = new int[sc.nextInt()]; // (풀이) 한줄로 합쳐서 사용!		
 		
 		for(int i=0 ; i<arr.length; i++) {
 			
