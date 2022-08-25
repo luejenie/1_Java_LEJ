@@ -108,9 +108,60 @@ public class StudentService {
 		}
 		
 	}
+
+
+	/** 일치하는 이름 검색
+	 * @param name
+	 * @return resultList
+	 */
+	public List<Student> selectStudent1(String name) {
+		
+		List<Student> resultList = new ArrayList<Student>();
+		
+		
+		// 향상된 for문
+		for( Student s : stdList ) {
+			
+			// 검색한 이름과 학생 이름이 같은 경우
+			if(s.getName().equals(name)) {   
+				
+				resultList.add(s);   //일치한 애들 옮겨담고			
+			}			
+		}
+	
+		return resultList;
+	}
 	
 	
 	
+	
+	
+	
+	
+	/** 포함하는 이름 검색
+	 * @param name
+	 * @return resultList
+	 */
+	public List<Student> selectStudent2(String name) {
+		
+		List<Student> resultList = new ArrayList<Student>();
+		
+		
+		// 향상된 for문
+		for( Student s : stdList ) {
+			
+			// 검색한 이름과 학생 이름에 포함되어 있는 경우
+			if(s.getName().contains(name)) {
+				// String.contains(값) 
+				// - 문자열에 값이 포함되어 있으면 true
+				// - 
+				
+				resultList.add(s);   //일치한 애들 옮겨담고			
+			}			
+		}
+	
+		return resultList;
+	}
 	
 	
 	
