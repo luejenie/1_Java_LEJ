@@ -62,8 +62,7 @@ public class ListService {
 		// remove(int index) : index 위치의 객체를 제거(정확히는 꺼내서 반환)
 		Object student = list.remove(2);
 		
-		
-		
+				
 		// size() : List에 저장된 요소의 개수를 반환   _요소가 있는 개수만 가지고 옴. null 값은 x
 		// get(int index) : index에 위치한 객체를 얻어옴.
 		

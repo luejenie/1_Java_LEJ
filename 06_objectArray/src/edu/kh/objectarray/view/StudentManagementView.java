@@ -10,22 +10,6 @@ import edu.kh.objectarray.model.vo.Student;
  * @author user1
  *
  */
-/**
- * @author user1
- *
- */
-/**
- * @author user1
- *
- */
-/**
- * @author user1
- *
- */
-/**
- * @author user1
- *
- */
 public class StudentManagementView {
 	
 	//필드 == 멤버변수

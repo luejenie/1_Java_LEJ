@@ -8,7 +8,7 @@ public class ServerRun {
 		
 		ServerService service = new ServerService();
 		
-		service.serverStrat();
+		service.serverStart();
 	}
 
 }

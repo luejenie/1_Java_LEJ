@@ -40,7 +40,7 @@ public class ServerService {
 	 * 
 	 * */
 	
-	public void serverStrat() {
+	public void serverStart() {
 //		1) 서버의 포트번호 정함
 		int port = 8500;
 		// 포트는 0~65535 사이를 지정 가능

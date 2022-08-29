@@ -50,17 +50,17 @@ public class StudentManagementService {
 				
 			}
 		}
-			
-			if(idx == -1) {  //null인 인덱스가 없는 경우   //빈자리가 잇으면 0 반환
-				return 0;  // 현재 메서드를 종료하고 호출한 곳으로 0을 가지고 돌아감.
-			}
-			
-			
-			// null인 인덱스에 학생 객체를 생성해서 주소를 대입
-			stdArr[idx] = new Student(grade, classRoom, number, name);   // 생성하면 시작 주소가 대입
-						
-			return 1;  // 빈자리가 없으면 1 반환
-			
+		
+		if(idx == -1) {  //null인 인덱스가 없는 경우   //빈자리가 잇으면 0 반환
+			return 0;  // 현재 메서드를 종료하고 호출한 곳으로 0을 가지고 돌아감.
+		}
+		
+		
+		// null인 인덱스에 학생 객체를 생성해서 주소를 대입
+		stdArr[idx] = new Student(grade, classRoom, number, name);   // 생성하면 시작 주소가 대입
+		
+		return 1;  // 빈자리가 없으면 1 반환
+		
 		}
 		
 	  //return idx;

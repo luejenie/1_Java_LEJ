@@ -11,7 +11,7 @@ public class Run {
 		
 		ListService service1 = new ListService();
 		
-//		service1.ex1();
+		service1.ex1();
 //		new StudentView().displayMenu(); // 객체 1회성 사용 (만들자마자 메서드만 호출하고 없어져라) 
 		
 		SetService service2 = new SetService();
@@ -21,7 +21,7 @@ public class Run {
 		
 		MapService service3 = new MapService();
 //		service3.ex1();
-		service3.ex2();
+//		service3.ex2();
 //		service3.ex3();
 		
 				
