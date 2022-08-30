@@ -1,6 +1,5 @@
 package edu.kh.emp.view;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -11,7 +10,6 @@ public class EmployeeView {
 	
 	private Scanner sc = new Scanner(System.in);
 	private EmployeeService service = new EmployeeService();
-	private Employee e = new Employee();
 	
 	
 	
@@ -180,13 +178,13 @@ public class EmployeeView {
 		System.out.print("사번 검색 : ");
 		int id = sc.nextInt();
 		
-		Employee e = service.removeExp(id);
+		Employee e = service.removeEmp(id);
 		
 		if(e == null) {
 			System.out.println("실패(사번 불일치)");
 		
 		} else {
-			System.out.println(e.getEmpName() + "사원의 정보가 삭제되었습니다.");
+			System.out.println(e.getEmpName() + " 사원의 정보가 삭제되었습니다.");
 		}
 		
 		

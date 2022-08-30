@@ -111,7 +111,11 @@ public class EmployeeService {
 	
 	
 	
-	public Employee removeExp(int empId) {
+	/** 5.사번이 일치하는 사원 정보 삭제
+	 * @param empId
+	 * @return
+	 */
+	public Employee removeEmp(int empId) {
 		
 		if(empId <0 || empId >= empList.size()) {
 			return null;
