@@ -118,7 +118,7 @@ public class Employee {
 	//사번, 사원이름, 주민등록번호, 이메일, 전화번호, 부서명, 직급명, 급여
 	@Override
 	public String toString() {
-		return "사원 정보 출력 \n사원번호(사번) : " + empId
+		return "----사원 정보 출력---- \n사원번호(사번) : " + empId
 				+ "\n사원이름 : " + empName
 				+ "\n주민등록번호 : " + empNo 
 				+ "\n이메일 : " + email 

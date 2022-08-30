@@ -43,7 +43,7 @@ public class EmployeeView {
 			case 2 : lookupAll(); break;
 			case 3 : lookupEmp(); break;
 			case 4 : updateEmp(); break;
-			case 5 : break;
+			case 5 : removeEmp();break;
 			case 6 : break;
 			case 7 : break;
 			case 8 : break;
@@ -137,50 +137,61 @@ public class EmployeeView {
 	}
 	
 	
+	//다시
 	//4. 사번이 일치하는 사원 정보 수정  //사원이름, 전화번호, 부서명, 직급명, 급여
 	public void updateEmp() {
 		System.out.println("[사원 정보 수정(사번 일치)]");
 		System.out.print("사번 검색 : ");
 		int id = sc.nextInt();
 		
-		List<Employee> empList = new ArrayList<Employee>();
+		System.out.print("사원 이름(수정) : ");
+		String name = sc.next();   //입력버퍼개행 붙여야 하나?
 		
-		if(true) {
-			for(Employee e : empList) {
-				if(e.getEmpId() == id) {				
-					
-					System.out.print("사원 이름(수정) : ");
-					String name = sc.next();   //입력버퍼개행 붙여야 하나?
-					
-					System.out.print("전화번호(수정) : ");
-					String phone = sc.next();
-					sc.nextLine();
-					
-					System.out.print("부서명(수정) : ");
-					String dptTitle = sc.nextLine();
-					
-					System.out.print("직급명(수정) : ");
-					String jobName = sc.nextLine();
-					
-					System.out.print("급여(수정) : ");
-					int salary = sc.nextInt();
-					
-					service.updateEmp(id, name, phone, dptTitle, jobName, salary);
-					System.out.println("정보가 수정되었습니다.");
-						
-				} else {
-					
-					System.out.println("[사번불일치] 사번을 다시 확인해주세요.");
-				}
-			}
-		} 
+		System.out.print("전화번호(수정) : ");
+		String phone = sc.next();
+		sc.nextLine();
+		
+		System.out.print("부서명(수정) : ");
+		String dptTitle = sc.nextLine();
+		
+		System.out.print("직급명(수정) : ");
+		String jobName = sc.nextLine();
+		
+		System.out.print("급여(수정) : ");
+		int salary = sc.nextInt();
+		
+		
+		
+		if(service.updateEmp(id, name, phone, dptTitle, jobName, salary)) {
 			
-		
+			System.out.println("정보가 수정되었습니다.");
+
+		} else {
+			System.out.println("실패");
+		}
+
 
 	}
 	
 	
-	
+	//5. 사번이 일치하는 사원 정보 삭제
+	public void removeEmp() {
+		System.out.println("[사원 정보 삭제(사번 일치)]");
+		System.out.print("사번 검색 : ");
+		int id = sc.nextInt();
+		
+		Employee e = service.removeExp(id);
+		
+		if(e == null) {
+			System.out.println("실패(사번 불일치)");
+		
+		} else {
+			System.out.println(e.getEmpName() + "사원의 정보가 삭제되었습니다.");
+		}
+		
+		
+		
+	}
 	
 	
 	
